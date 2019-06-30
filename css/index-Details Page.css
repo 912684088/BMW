@@ -1,0 +1,639 @@
+* {
+	margin: 0;
+	padding:0;
+}
+
+/*导航栏背景*/
+.nav {
+	width: 100%;
+	height: 100px;
+	background: #8e8e8e;
+}
+
+ul {
+	list-style: none;
+}
+/*去掉点*/
+a {
+	text-decoration: none;
+}
+/*导航栏中第一行内容*/
+.nav_div_a {
+	width: 62%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	/*排列*/
+}
+
+.nav_div_a ul li {
+	font-size: 15px;
+}
+
+/*导航栏中第二行内容*/
+.nav_ul_a {
+	display: flex;
+	margin-left: 0;
+}
+
+.nav_ul_a>li {
+/*	width: 125px;*/
+	margin-top: 19px;	
+}
+
+.nav_ul_a>li a {
+	width: 100px;
+	font-size: 18px;
+	color: #fff;
+	padding-right: 20px;
+	line-height: 20px;
+}
+.nav_ul_a li.home a{
+	font-size:20px;
+	color:#00f(87, 151, 211);
+}
+.nav_ul_a li a:hover{
+	color:#1c69d4;
+} 
+.nav_ul_a li.span a{
+	font-size:18px;
+}
+/* 链接图标 搜索图标*/
+.nav_ul_a,.link,.font,.span{
+	font-size:25px;
+ }
+ .fonta{
+	 background: #fff;
+	 width: 25px !important;
+	 height: 25px !important	;
+	 border-radius:28px; 
+ }
+ .fontb{
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+ }
+ .fonta img{
+	 width: 100%;
+ }
+ .fontc{
+	 width: 70px !important;
+ }
+ .link img{
+	 color:#ffff;
+	 z-index:50; 
+	 vertical-align: middle;/*文字与图片同一行*/
+ }
+/*首页导航栏的颜色*/
+.nav_ul_a ul:last-child li:first-child a {
+	color: #00f;
+}
+/*---------导航栏中BMW标志图片---------*/
+.img {
+	position: absolute;
+	top: 10px;
+	right: 18%;
+	z-index:25;
+}
+.img>img {
+	width: 100px;
+}
+/*--- 查找你的BMW ---*/ 
+.Model{
+	width:100%;
+}
+.title{
+	width:1275px;
+	height:110px;
+	margin:0 auto;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	 
+}
+h3{
+	width:1275px;
+	height: 30px;
+	margin-top:45px;
+	margin-bottom:45px;
+	padding-left:10px;
+	padding-right:10px;
+
+}
+/* 车系选择 */
+.seek{
+	width:1275px;
+	margin:0 auto;
+}
+.medium{
+	width:1200px;
+	height:94px;
+	display:flex;/*弹性*/
+  flex-flow:row wrap;
+	justify-content:space-between; 
+}
+.medium li{
+	width:200px;
+	font-size: 18px;
+	vertical-align:middle;
+	margin-bottom:30px;
+	
+}
+input[type="checkbox" i]{
+	width:20px;
+	height:20px;
+	margin-right: 8px;
+	display: block;
+	float: left;
+  line-height: 24px;
+	height: 24px;
+}
+/*------BMW 1系-字体鼠标悬停效果---*/
+a{font-size:18px;}
+a:hover{
+       color:rgb(0, 68, 255);
+}
+ /*---------BMW 1系--------*/
+.ds1-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	 
+  flex-flow:row wrap;
+}
+.ds1-model-card--image{
+	 padding:0 8px;
+	 position:relative;	  
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+
+}
+.ds1-model-card--image img{
+	width:300px;
+	height:180px;
+}
+.ds1-models--series-title{
+	margin-right: 35px;
+}
+.ds1-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*--------- BMW 2系 ----------*/
+.ds2-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;
+	flex-flow:row wrap;	 
+}
+.ds2-model-card--image{
+	 padding:0 8px;
+	 position:relative;	 
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+}
+.ds2-model-card--image img{
+	width:300px;
+	height:180px;
+}
+.ds2-models--series-title{
+	margin-right: 35px;
+}
+.ds2-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW 3系 ------------*/
+.ds3-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;
+	flex-flow:row wrap;	 
+}
+.ds3-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+}
+.ds3-model-card--image img{
+	width:300px;
+	height:180px;
+}
+.ds3-models--series-title{
+	margin-right: 35px;
+}
+.ds3-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW 4系 ------------*/
+.ds4-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	
+	flex-flow:row wrap; 
+}
+.ds4-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+}
+.ds4-model-card--image img{
+	width:300px;
+	height:180px;
+}
+.ds4-models--series-title{
+	margin-right: 35px;
+}
+.ds4-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW 5系 ------------*/
+.ds5-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	
+	flex-flow:row wrap; 
+}
+.ds5-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+}
+.ds5-model-card--image img{
+	width:300px;
+	height:180px;
+}
+.ds5-models--series-title{
+	margin-right: 35px;
+}
+.ds5-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*--------- BMW 6系 ----------*/
+.ds6-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;
+	flex-flow:row wrap;	 
+}
+.ds6-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+}
+.ds6-model-card--image img{
+	width:300px;
+	height:180px;
+}
+.ds6-models--series-title{
+	margin-right: 35px;
+}
+.ds6-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW 7系 ------------*/
+.ds7-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;
+	flex-flow:row wrap;	 
+}
+.ds7-model-card--image{
+	 padding:0 8px;
+	 position:relative;	  
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+}
+.ds7-model-card--image img{
+	width:300px;
+	height:180px;
+}
+.ds7-models--series-title{
+	margin-right: 35px;
+}
+.ds7-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW 8系 ------------*/
+.ds8-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;
+	flex-flow:row wrap;	 
+}
+.ds8-model-card--image{
+	 padding:0 8px;
+	 position:relative;	 
+	 justify-content:flex-start;
+	 align-items:stretch;
+	 line-height:32px;
+	 font-size:20px;
+}
+.ds8-model-card--image img{
+	width:300px;
+	height:180px;
+	position: relative;
+	z-index: 6;
+}
+.ds8-models--series-title{
+	margin-right: 35px;
+}
+.ds8-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW X系 ------------*/
+.dsx-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	
+	flex-flow:row wrap;
+}
+.dsx-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch; 
+	 line-height:32px;
+	 font-size:20px;
+}
+.dsx-model-card--image img{
+	width:300px;
+	height:180px;
+	position: relative;
+	z-index: 6;
+}
+.dsx-models--series-title{
+	margin-right: 35px;
+}
+.dsx-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW M系 ------------*/
+.dsm-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	
+	flex-flow:row wrap;
+}
+.dsm-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch; 
+	 line-height:32px;
+	 font-size:20px;
+}
+.dsm-model-card--image img{
+	width:300px;
+	height:180px;
+	position: relative;
+	z-index: 6;
+}
+.dsm-models--series-title{
+	margin-right: 35px;
+}
+.dsm-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW Z系 ------------*/
+.dsz-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	
+	flex-flow:row wrap;
+}
+.dsz-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch; 
+	 line-height:32px;
+	 font-size:20px;
+}
+.dsz-model-card--image img{
+	width:300px;
+	height:180px;
+	position: relative;
+	z-index: 6;
+}
+.dsz-models--series-title{
+	margin-right: 35px;
+}
+.dsz-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW i系 ------------*/
+.dsi-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	
+	flex-flow:row wrap;
+}
+.dsi-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch; 
+	 line-height:32px;
+	 font-size:20px;
+}
+.dsi-model-card--image img{
+	width:300px;
+	height:180px;
+	position: relative;
+	z-index: 6;
+}
+.dsi-models--series-title{
+	margin-right: 35px;
+}
+.dsi-models-js--series-title{
+	width: 400px;
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+/*------------ BMW iPerformance系 ------------*/
+.dsip-model-card{
+	width:1275px;
+	margin:0 auto;
+	padding:0 40px;
+	display:flex;	
+	flex-flow:row wrap;
+}
+.dsip-model-card--image{
+	 padding:0 8px;
+	 position:relative;
+	 justify-content:flex-start;
+	 align-items:stretch; 
+	 line-height:32px;
+	 font-size:20px;
+}
+.dsip-model-card--image img{
+	width:300px;
+	height:180px;
+	position: relative;
+	z-index: 6;
+}
+.dsip-models--series-title{
+	margin-right: 35px;
+}
+.dsip-models-js--series-title{
+	font-size: 124px;
+	font-weight:normal;
+	color: #e6e6e6;
+	position: absolute;
+	top: 70px;
+	left: -22px;
+}
+
+
+	/*------------------页面底部第六个div--------------------*/
+	.bottom {
+		width: 100%;
+		padding: 8px;
+		background: #8e8e8e;
+	}		
+	/*  页脚第一个div */
+	.bottom-footer{
+		width:1200px;
+		height: 268px;
+		margin:0 auto;
+		padding-left: 37.5px;
+		padding-right: 37.5px;
+	
+	}
+	.table{
+		position: relative;
+		padding: 5px;
+			 
+	}
+	/* 页脚div里文字 */
+	.widget{
+		width: 533px;
+		display: table-row;		
+	}
+	/* 字体颜色 */
+	 .widget span{
+		font-size:18px;
+		color: #fff;
+	 }
+	.list{
+	  width:533px;
+		display: table-cell;
+		padding-bottom: 16px;
+	  padding-left: 10px;	 
+ }
+  .list li{
+	  display: table-cell;
+	  display: inline;
+	  margin-left:13px;	 
+ }
+   /* 字体颜色 */
+    .list a{
+	   font-size:17px;
+	   color: #fff;
+}
+   /* 字体鼠标悬停效果 */
+    .list a:hover{
+		color:#00f;
+	}
+   /*页脚文字中横线*/
+ .bottom-footer hr{
+	  width:1200px;
+	  height:2px;
+	  float:left;
+	  background-color:#ccc;
+ }
+   /*页脚右下角文字*/
+ .bottom-footer p{
+	  position:absolute;/*绝对定位*/
+	  right:-2px;
+	  bottom:-30px;
+	  color:#fff;
+}
+	

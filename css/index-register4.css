@@ -1,0 +1,285 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+/*注册页面左边图片*/
+.picture{
+    width: 63%;
+    height: 921px;
+    border: 2px solid #ccc;
+    background-image: url(../image-bmw/108.jpg);
+    background-size:cover;
+    float:left;
+    position:relative;
+}
+/*注册页面左边图片上文字*/
+.characters p{
+    font-size:60px;
+    color: #1c81d4;
+    padding-right:10px;
+    position:relative;
+    top:188px;
+    right:-454px;
+}
+.characters p:hover{
+    color:#8dd41c;
+    font-size:80px;
+}
+/*右边用户注册页面*/
+.User{
+    width: 36%;
+    height: 921px;
+    border: 1px solid #ccc;
+    float:right;
+    position: relative;
+    display: flex;
+    justify-content:space-around;
+    align-content: space-around;
+}
+.User .Login{
+    width:68%;
+    height:600px;
+    list-style:none;
+    padding-top:145px;
+    padding-right:10px; 
+    padding-left: 10px   
+}
+.User .message{
+    width:473px;
+    height:36px;
+    border: 0 none;
+    margin: 0 -10px 9px;
+}
+.message ul{
+    width:750px;
+    height:35px;
+    display: table;
+    padding:0;
+    display: table;
+    content: " ";
+    clear: both;
+}
+.message ul li{
+    width:29%;
+    float:left;
+    list-style: none;
+    padding:0 10px;
+    margin-bottom: -1px;
+}
+.message li a{
+    font-size: 20px;
+    padding: 0 0 12px 0;
+    position: relative;
+    display: block;
+    color: #1c69d4;
+    text-decoration : none;  
+    border-bottom: 3px solid #1c69d4
+}
+.a{
+     
+}
+/* 用户姓名注册 */
+.uname{
+    width:750px;
+    height:35px;
+    padding:0;
+    content: " ";
+    clear: both;  
+}
+.name{
+    width:20%;
+    display:flex;
+    list-style: none;
+    padding:0 10px;
+    margin-bottom: -1px;
+}
+.name{
+    font-size: 15px;
+    padding: 0 0 12px 0;
+    position: relative;
+    display: flex;
+    color: #888;
+}
+/* 用户姓输入框 */
+input[type="surname"]{
+    width:29%;
+    height:55px;
+    line-height: 55px;
+    border:0 none;
+    padding-left: 5px;
+    font-size:20px;
+    margin-left:10px;  
+    border-bottom:1.5px solid #888;
+    position: relative;
+}
+/* 用户名输入框 */
+input[type="uname"]{
+    width:29%;
+    height:55px;
+    line-height: 55px;
+    border:0 none;
+    padding-left: 5px;
+    font-size:20px;
+    margin-left:20px;  
+    border-bottom:1.5px solid #888;
+    position: relative;
+}
+/* 用户性别 */
+.sex{
+    margin-top:8px;
+    margin-left:5px;
+}
+.man,.female{
+    width:15px;
+    height:15px;
+    vertical-align: bottom;
+    margin-top: 8px;
+    font-size:18px;  
+    
+}
+input[type="Remember"]{
+    width:96%;
+    height:55px;
+    line-height: 55px;
+    border:0 none;
+    padding-left: 5px;
+    font-size:22px;
+    margin-top:20px;
+    border-bottom:1px solid #888;
+}
+/* 短信注册 */
+.login-form{
+    width:403px;
+    height:55px;
+    padding:0;
+    margin-bottom: 15px;
+    position: relative;
+} 
+input[type="text"]{
+    width:96%;
+    height:55px;
+    line-height: 55px;
+    border:0 none;
+    padding-left: 5px;
+    font-size:22px;
+    margin-top:118px;  
+    border-bottom:1px solid #888;
+    position: relative;
+}
+/* 发送验证码按钮 */
+.verification{
+    width:110px;
+    height: 36px;
+    position: absolute;
+    right:123px;
+    bottom:308px;
+    line-height: 32px;/*调整文字*/
+    font-size:15px;
+    border-radius:5px;
+    background-color:#b1b1b1;
+}
+   /* 密码注册 */
+.login-form{
+    width:403px;
+    height:55px;
+    margin-bottom: 15px;
+} 
+input[type="password"]{
+    width:96%;
+    height:55px;
+    line-height: 55px;
+    border:0 none;
+    padding-left: 5px;
+    font-size:22px;
+    margin-top:20px;
+    border-bottom:1px solid #888;
+} 
+/* 商家与用户条约 */
+.Business .treaty{
+    width:750px;
+    height:35px;
+    padding:0;
+    display: table;
+    content: " ";
+    clear: both;
+    list-style: none;
+}
+.Business treaty li{
+    width:29%;
+    float:left; 
+    padding:0 10px;
+    margin-bottom: -1px;
+}
+.Business li a{
+    font-size: 20px;
+    padding: 0 0 12px 0;
+    position: relative;
+    display: block;
+    color: #888;
+}
+ /* 选择我同意 */
+.remembers{
+    width:453px;
+    height:42px;
+    margin-top:10px;
+} 
+/* 同意选择框 */
+.checkbox{
+    width:18px;
+    height:18px;
+    vertical-align: bottom;
+    color:#1c69d4;
+} 
+ /* 我同意以上条款*/
+ .Remember{
+    width:61px;
+    height:15px;
+    font-size:18px;
+} 
+/* 注册按钮 */
+.login{
+    width:453px;
+    height:50px;
+    margin-top:20px;
+    font-size:20px;
+    border-radius:5px;
+    background: -webkit-linear-gradient(left, #006699 0%,#ff0 50%, #990066 100%);
+}
+.login:hover{
+    width:460px;
+    height: 60px;
+    font-size:30px;
+    color:#1e9706;
+}
+/* 登录按钮 */
+.registered{
+    width:453px;
+    height:50px;
+    margin-top:20px;
+    font-size:20px;
+    background: -webkit-linear-gradient(left, #c4b91cfd 0%,rgba(231, 17, 17, 0.945) 50%, #069297 100%);
+    outline: 0;
+}
+.registered:hover{
+    width:460px;
+    height: 60px;
+    font-size:30px;
+    color:#069297;
+}
+/*登录界面右上角BMW标志图片*/
+.logo {
+	position: absolute;
+    top: 10px;
+    right: 115px;
+    height: 115px;
+    width: 103px;
+    z-index: -99;
+}
+
+.logo>img {
+    display: block;
+    max-width: 100%;
+}
+ 
+
+ 

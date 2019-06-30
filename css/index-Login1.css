@@ -1,0 +1,220 @@
+* {
+	margin: 0;
+	padding:0;
+}
+/*导航栏背景*/
+.nav {
+	width: 100%;
+	height: 100px;
+	background: #8e8e8e;
+}
+ul {
+	list-style: none;
+}
+/*去掉点*/
+a {
+	text-decoration: none;
+}
+/*导航栏中第一行内容*/
+.nav_div_a {
+	width: 62%;
+	margin: 0 auto;
+	flex-direction: column;
+	/*排列*/
+}
+.nav_div_a ul li {
+	font-size: 15px;
+}
+/*导航栏中第二行内容*/
+.nav_ul_a {
+	display: flex;
+	margin-left: 0;
+}
+.nav_ul_a>li {
+	margin-top: 19px;
+}
+.nav_ul_a>li>a {
+	/* width: 100px; */
+	line-height: 10px;
+	font-size: 18px;
+	color: #fff;
+	display: flex;
+	padding-right: 20px;
+	line-height: 20px;
+}
+.nav_ul_a li.home a{
+	font-size:20px;
+	color:#f0f(87, 151, 211);
+}
+.nav_ul_a li a:hover{
+	color:#1c69d4;
+} 
+.nav_ul_a li.span a{
+	font-size:18px;
+}
+/* 链接图标 搜索图标*/
+.nav_ul_a,.link,.font,.span{
+	font-size:25px;
+ 
+ }
+ .fonta{
+	 background: #fff;
+	 width: 25px !important;
+	 height: 25px !important	;
+	 border-radius:28px; 
+ }
+ .fontb{
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+ }
+ .fonta img{
+	 width: 100%;
+ }
+ .fontc{
+	 width: 70px !important;
+ }
+ .link img{
+	 color:#ffff;
+	 z-index:50; 
+	 vertical-align: middle;/*文字与图片同一行*/
+ }
+/*首页导航栏的颜色*/
+.nav_ul_a ul:last-child li:first-child a {
+	color: #00f;
+}
+/*导航栏中BMW标志图片*/
+.img {
+	position: absolute;
+	top: 10px;
+	right: 18%;
+	z-index:25;
+}
+.img>img {
+	width: 100px;
+}
+/*登录页面中的背景图片*/
+.d1_son {
+	position: relative;/*相对定位*/
+	width:100%;
+	height: 980px;
+	display: flex;
+	margin:0 auto;
+	background-image:url(../image-bmw/mobile@2x.jpg);
+	background-repeat: repeat;/*背景图片不平
+	铺*/
+	background-position-y:54%;
+	background-size:100% 201% ;
+}
+.d1_son img{
+	width:100%;
+	height: 100%;	
+}
+/*----图片里的文字---*/
+.img-advertisement h3{
+	width:39px;
+	height:942px;
+	}
+    .advertisement{
+		color:#fff; 
+		float:left;/*文字浮动*/
+		margin-top:30px;
+		position:absolute;/*绝对定位*/
+		left:311px;
+		top:60px;
+		}
+		.spacing{line-height:50px;}/*设置h1文字行高 */
+		div h4{line-height:40px;font-size:22px;}/*设置h4文字行高*/
+		/* 登录按钮 */
+	.Login ul{
+		width: 330px;
+		height:50px;
+		font-size:18px;
+		margin-top:46px;
+		margin-bottom:10px;  
+		background:#1c69d4;/*文字背景颜色*/
+		text-align:center;/*文字居中*/
+		line-height: 48px;/*行高*/
+		border-radius:8px;/*设置圆角*/
+	}
+    /*注册按钮 */
+		.register ul{
+			width: 330px;
+			height:50px;	
+			font-size:18px;
+			margin-top:46px;
+			margin-bottom:10px;
+			margin-left:20px;
+			background:#8e8e8e;/*文字背景颜色*/
+			text-align:center;/*文字居中}*/
+			line-height: 48px;/*行高*/
+			border-radius:6px;/*设置圆角*/
+		}
+		/*按钮盒子弹性*/
+		.button{display:flex;}
+/*-----------页面底部第六个div-----------*/
+.bottom {
+	width: 100%;
+	padding: 8px;
+	background: #8e8e8e;
+}		
+/*  页脚第一个div */
+.bottom-footer{
+	width:1200px;
+	height: 268px;
+	margin:0 auto;
+	padding-left: 37.5px;
+	padding-right: 37.5px;
+
+}
+.table{
+	position: relative;
+	padding: 5px;
+		 
+}
+/* 页脚div里文字 */
+.widget{
+	width: 533px;
+	display: table-row;		
+}
+/* 字体颜色 */
+ .widget span{
+	font-size:18px;
+	color: #fff;
+ }
+.list{
+	width:533px;
+	display: table-cell;
+	padding-bottom: 16px;
+	padding-left: 10px;	 
+}
+	.list li{
+	 display: table-cell;
+	 display: inline;
+	 margin-left:13px;	 
+}
+ /* 字体颜色 */
+	.list a{
+	 font-size:17px;
+	 color: #fff;
+}
+ /* 字体鼠标悬停效果 */
+	.list a:hover{
+	color:#00f;
+}
+ /*页脚文字中横线*/
+.bottom-footer hr{
+	width:1200px;
+	height:2px;
+	float:left;
+	background-color:#ccc;
+}
+ /*页脚右下角文字*/
+.bottom-footer p{
+	position:absolute;/*绝对定位*/
+	right:-2px;
+	bottom:-30px;
+	color:#fff;
+}
+		
+			 

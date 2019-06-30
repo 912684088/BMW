@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/index-register3.css">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 左边图片 -->
+   <div class="picture">
+      <div class="characters">
+         <p>用户短信注册</p>
+      </div>
+   </div>
+   <!-- 右边用户注册页面 -->
+   <div class="User"> 
+      <div class="logo">
+         <img src="../image-bmw/bmw_63.png" alt="">
+      </div>
+      <div class="Login">
+         <div class="message">
+            <ul>
+               <li><a href="">短信注册</a></li>
+               <li><a href="index-register4.html">密码注册</a></li>
+            </ul>
+             <!-- 用户姓名注册 -->
+             <ul class="name">
+               <input class="surname" placeholder="姓:" type="surname" name="surname">
+               <input class="uname" placeholder="名:" type="uname" name="uname"> 
+            </ul>
+             <!-- 用户性别 -->
+            <div class="sex">
+               <input class="checkbox" id="auto" type="radio">
+               <label class="man" for="auto">男</label>
+               <input class="checkbox" id="auto" type="radio">
+               <label class="female" for="auto">女</label>
+            </div>
+         </div>
+      <div>
+             <!-- 手机号码注册 -->
+         <form id="login-form" method="post" action="/user">  
+            <input class="text" placeholder="手机号码" type="text" name="text"><br>  
+            <!-- 短信验证码 -->
+            <input class="password" placeholder="短信验证码" type="password" name="upwd"><br>
+            <input type="submit" value="发送验证码" class="verification"> 
+      <!-- 商家与用户条约 -->
+      <div class="Business">
+            <div>
+               <ul class="treaty">
+                  <li><a href=""> BMW账户条款与条件 </a></li>
+               </ul>
+            </div>
+         <div>
+         <!-- 我同意以上条款  -->
+         <div class="remembers">
+            <input class="checkbox" id="auto" type="checkbox">
+            <label class="Remember" for="auto">我同意以上条款</label><br>
+         </div>
+         <!-- 注册按钮 -->
+             <input type="submit" value="注册" class="login"><br>   
+         <!-- 登录按钮 -->
+             <input type="submit" value="登录" class="registered">    
+         </form>
+      </div>
+   </div>   
+</body>
+</html>

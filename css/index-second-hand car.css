@@ -1,0 +1,69 @@
+* {
+	margin: 0;
+	padding:0;
+}
+/*导航栏背景*/
+.nav {
+	width: 100%;
+	height: 100px;
+	background: #8e8e8e;
+}
+ul {
+	list-style: none;
+}
+/*去掉点*/
+a {
+	text-decoration: none;
+}
+/*导航栏中第一行内容*/
+.nav_div_a {
+	width: 62%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	/*排列*/
+}
+.nav_div_a ul li {
+	font-size: 15px;
+}
+/*导航栏中第二行内容*/
+.nav_ul_a {
+	display: flex;
+	margin-left: 0;
+}
+.nav_ul_a>li {
+	margin-top: 19px;
+	
+}
+.nav_ul_a>li>a {
+	width: 100px;
+	line-height: 10px;
+	font-size: 18px;
+	color: #fff;
+	padding-right: 20px;
+	line-height: 20px;
+}
+.nav_ul_a li.home a{
+	font-size:20px;
+	color:#f0f(87, 151, 211);
+}
+.nav_ul_a li a:hover{
+	color:#1c69d4;
+} 
+.nav_ul_a li.span a{
+	font-size:18px;
+}
+/*首页导航栏的颜色*/
+.nav_ul_a ul:last-child li:first-child a {
+	color: #00f;
+}
+/*导航栏中BMW标志图片*/
+.img {
+	position: absolute;
+	top: 10px;
+	right: 18%;
+	z-index:25;
+}
+.img>img {
+	width: 100px;
+}
