@@ -1,69 +1,397 @@
 * {
 	margin: 0;
 	padding:0;
+} 
+/* 导航栏背景*/
+.navigation {
+	width: 100%;	
 }
-/*导航栏背景*/
-.nav {
+.character{
 	width: 100%;
 	height: 100px;
 	background: #8e8e8e;
-}
-ul {
-	list-style: none;
-}
-/*去掉点*/
-a {
-	text-decoration: none;
-}
-/*导航栏中第一行内容*/
-.nav_div_a {
-	width: 62%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	/*排列*/
-}
-.nav_div_a ul li {
-	font-size: 15px;
-}
-/*导航栏中第二行内容*/
-.nav_ul_a {
-	display: flex;
-	margin-left: 0;
-}
-.nav_ul_a>li {
-	margin-top: 19px;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:nowrap; 
 	
 }
-.nav_ul_a>li>a {
-	width: 100px;
-	line-height: 10px;
-	font-size: 18px;
-	color: #fff;
-	padding-right: 20px;
-	line-height: 20px;
+.navmiddle{
+	width: 1200px;
+	height: 100px;
+	margin:auto;
+	padding-left: 37.5px;
+	padding-right: 37.5px;
 }
-.nav_ul_a li.home a{
-	font-size:20px;
-	color:#f0f(87, 151, 211);
+/* 第一行内容 */
+.lined{
+	width:800px; 	 
+	height: 25px;
+	float:left;
+	line-height:30px;
+	font-size:16px;
+	color:#fff;
+	list-style:none;
+	margin-top:16px;
 }
-.nav_ul_a li a:hover{
-	color:#1c69d4;
-} 
-.nav_ul_a li.span a{
+.lined>li{
+	margin-right:16px;
+	display: table-cell;
+	display: inline;	 
+}
+.lined>li>a{
+	text-decoration:none;
+	color:#fff;
+	line-height:30px;	
+}
+.lined>li>a:hover{
+    color:#0a18d8;
+}
+/* 第二行文字 */
+.two{
+	width:512px; 
+	height:25px; 
+	float:left; 
 	font-size:18px;
+	color:#fff;
+	list-style:none;
+	margin-top:16px;	 
 }
-/*首页导航栏的颜色*/
-.nav_ul_a ul:last-child li:first-child a {
-	color: #00f;
+.two>li{
+	float:left;
+	font-size:20px;
+	margin:0;
+	margin-right:20px;
 }
-/*导航栏中BMW标志图片*/
+
+ul li.home a{
+	color:#0a18d8;
+	font-size:20px;
+}
+.two>li>a{
+	text-decoration:none;
+	color:#fff;
+	line-height:30px;	
+}
+.two>li>a:hover{
+	color:#0a18d8;
+}
+/* 快速链接/搜索 */
+#search{
+	width:230px;
+	height:20px;
+	float:left;
+	margin:0;	
+	list-style:none;	
+	}
+	/*文字调式*/
+.link>a{text-decoration: none;}
+.link>a>span{
+	font-size:18px;
+	color:#fff; 		
+}
+.link>a>span:hover{
+    color:#0a18d8;
+}
+.link>a:hover{
+    color:#0a18d8;
+}
+/* 导航栏下拉菜单 */
+.dropdown{
+	margin-right:1px;
+	margin-top:1px;		
+}
+.dropdown-content a:hover {
+	background-color:rgb(236, 205, 30);
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width:200px;
+}
+.dropdown-content>div{
+	display: flex;
+	justify-content: space-between;
+}
+.dropdown-content a{
+	font-size:20px !important;
+	color:#fff;
+	padding: 12px 16px;
+	display: block;
+	z-index: 100;
+} 
+.dropdown,.serve{
+	font-size:20px !important;
+	color:#fff;
+}
+
+li>div>a:hover{
+	color:#0a18d8;
+}
+.dropdown-content a:hover {
+	background-color:rgb(236, 205, 30);
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+} 
+/* 链接图标 搜索图标*/
+.link{
+	float:left;
+	margin-top:18px;
+	margin-right:16px;
+}
+.link>span{ font-size:18px;}
+.fonta{
+	background: #ccc;
+	width: 25px !important;
+	height: 25px !important	;
+	border-radius:28px; 
+}
+.fontb{
+	display: flex;
+	align-items: center;
+	margin-right:5px;
+}
+.fonta img{
+	width: 100%;
+}
+.fontc{
+	width: 70px !important;
+}
+.link img{
+   color:#ffff;
+   z-index:50; 
+   vertical-align: middle;/*文字与图片同一行*/
+}
+/* 搜素框 
+input[type=text] {
+	width: 130px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('./image-bmw/ai219.png');
+	background-position: 10px 10px; 
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	-webkit-transition:width 0.4s ease-in-out;
+	transition:width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+	width: 30%;
+}*/
+/*----------导航栏中BMW标志图片-----------*/
 .img {
 	position: absolute;
 	top: 10px;
 	right: 18%;
-	z-index:25;
+	z-index:100;	
 }
+/* 图片设置大小 */
 .img>img {
 	width: 100px;
+}
+ body{
+	width:100%;
+	position:relative;
+}  
+/* 页面第一张大图里的内容 */
+.fleetWrapper{
+	width: 100%;
+	position:relative;
+}
+.section{
+	width: 100%;
+	height: 788px;
+}
+.but{
+	width:253px;
+	height:49px;
+	position: absolute;
+	top:210px;
+	left:95px;
+  line-height:50px;
+}
+.but-b1{
+	font-size: 100%;
+	background: transparent;
+	font-family: Arial, "微软雅黑";
+	color: #fff;
+	list-style-type: none;
+}
+.but-p1{
+	position: absolute;
+	margin: 0 15%;
+	top:31%;
+}
+/* 鼠标经过图片放大效果 */
+div>a>img{	
+	overflow: hidden; 
+	cursor: pointer;  
+	transition: all 1.5s;  
+}  
+div>a>img:hover{  
+transform: scale(1.1);  
+}  
+.but-p1 h2{
+  margin-right:180px;
+	margin-bottom:10px;
+	display: block;
+	width:705px;
+	height: 50px;
+	color:#fff; 
+}
+.but-p1 p{
+	line-height:25px;
+	font-size:19px;
+	color:#fff; 
+}
+.but-b1>img{
+	width:1275px;
+	height:696px;
+	margin-top:126px;
+	margin-left:291px;
+}
+/* BMW广告视频 */
+video{
+	width:1275px;
+	height:717px;
+	margin-top:-700px;
+	margin-left:290px;
+	margin-right:0px;
+	border:10px solid #8e8e8e;
+}
+/* 页面中的3D动画 */
+.fleet{
+	 width:100%;	
+	 position:absolute;
+	 bottom:336px; 
+	 margin-left:8px;	 
+ }
+.swiper{
+	 width:1920px;
+	 height:400px;
+	 display:flex;
+	 justify-content:space-around;	 
+ }
+.sw-t{
+	 width:347px;
+	 height:370px;
+ }
+ .sw-t,.img-l{
+	 width:347px;
+	 height:219px;
+ }
+ .sw-t h2{
+	width:347px;
+	height:33px;
+ } 
+ .sw-t p{
+	width:330px;
+	height:76px;
+ }
+.setMZTrack img{
+	width:330px;
+	height:42px;
+}
+/* 鼠标经过图片放大效果*/
+.img-l{ 
+	  overflow: hidden;
+		cursor: pointer;  
+		transition: all 0.6s;
+}
+.img-l:hover{
+	transform: scale(1.05);
+}
+/* 鼠标经过图片放大效果*/
+.setMZTrack img{
+	  overflow: hidden;
+		cursor: pointer;  
+		transition: all 0.6s;
+}
+.setMZTrack img:hover{
+	transform: scale(1.05);
+}
+/* 四个li */
+.status_bar{
+	width:100%;
+	height:8px;
+	margin:auto;
+	
+	/* justify-content:space-between;
+	display:flex; */
+}
+.status_bar>li{
+	width:210px;
+	height:8px;
+	float:left;
+	margin-right:50px;
+	list-style:none;
+}
+.atv{
+	background:#0a18d8;
+}
+/*-----页面底部第六个div------*/
+.bottom {
+	width: 100%;
+	padding: 8px;
+	background: #8e8e8e;
+	margin-top:480px;
+}		
+/*  页脚第一个div */
+.bottom-footer{
+	width:1200px;
+	height: 268px;
+	margin:0 auto;
+	padding-left: 37.5px;
+	padding-right: 37.5px;	
+}
+.table{
+	position: relative;
+	padding: 5px;		 
+}
+/* 页脚div里文字 */
+.widget{
+	width: 533px;
+	display: table-row;		
+}
+/* 字体颜色 */
+.widget span{
+	font-size:18px;
+	color: #fff;
+ }
+.list{ 
+	width:533px;
+	display: table-cell;
+	padding-bottom: 16px;
+	padding-left: 10px;	 
+}
+.list li{
+	display: table-cell;
+	display: inline;
+	margin-left:13px;	 
+}
+ /* 字体颜色 */
+.list a{
+	font-size:17px;
+	color: #fff;
+}
+ /* 字体鼠标悬停效果 */
+.list a:hover{
+	color:#00f;
+}
+ /*页脚文字中横线*/
+.bottom-footer hr{
+	width:1200px;
+	height:2px;
+	float:left;
+	background-color:#ccc;
+}
+ /*页脚右下角文字*/
+.bottom-footer p{
+	position:absolute;/*绝对定位*/
+	right:-2px;
+	bottom:-30px;
+	color:#fff;
 }

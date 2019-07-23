@@ -1,103 +1,205 @@
 * {
 	margin: 0;
 	padding:0;
+} 
+/* 导航栏背景*/
+.navigation {
+	width: 100%;	
 }
-
-/*导航栏背景*/
-.nav {
+.character{
 	width: 100%;
 	height: 100px;
 	background: #8e8e8e;
+	display:flex;
+	justify-content:space-between;
+	flex-wrap:nowrap; 
+	
 }
-
-ul {
-	list-style: none;
+.navmiddle{
+	width: 1200px;
+	height: 100px;
+	margin:auto;
+	padding-left: 37.5px;
+	padding-right: 37.5px;
 }
-/*去掉点*/
-a {
-	text-decoration: none;
+/* 第一行内容 */
+.lined{
+	width:800px; 	 
+	height: 25px;
+	float:left;
+	line-height:30px;
+	font-size:16px;
+	color:#fff;
+	list-style:none;
+	margin-top:16px;
 }
-/*导航栏中第一行内容*/
-.nav_div_a {
-	width: 62%;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-	/*排列*/
+.lined>li{
+	margin-right:16px;
+	display: table-cell;
+	display: inline;	 
 }
-
-.nav_div_a ul li {
-	font-size: 15px;
+.lined>li>a{
+	text-decoration:none;
+	color:#fff;
+	line-height:30px;	
 }
-
-/*导航栏中第二行内容*/
-.nav_ul_a {
-	display: flex;
-	margin-left: 0;
+.lined>li>a:hover{
+    color:#0a18d8;
 }
-
-.nav_ul_a>li {
-/*	width: 125px;*/
-	margin-top: 19px;	
-}
-
-.nav_ul_a>li a {
-	width: 100px;
-	font-size: 18px;
-	color: #fff;
-	padding-right: 20px;
-	line-height: 20px;
-}
-.nav_ul_a li.home a{
-	font-size:20px;
-	color:#00f(87, 151, 211);
-}
-.nav_ul_a li a:hover{
-	color:#1c69d4;
-} 
-.nav_ul_a li.span a{
+/* 第二行文字 */
+.two{
+	width:475px; 
+	height:25px; 
+	float:left; 
 	font-size:18px;
+	color:#fff;
+	list-style:none;
+	margin-top:16px;	 
 }
+.two>li{
+	float:left;
+	font-size:20px;
+	margin:0;
+	margin-right:20px;
+}
+
+ul li.home a{
+	color:#0a18d8;
+	font-size:20px;
+}
+.two>li>a{
+	text-decoration:none;
+	color:#fff;
+	line-height:30px;	
+}
+.two>li>a:hover{
+	color:#0a18d8;
+}
+/* 快速链接/搜索 */
+#search{
+	width:230px;
+	height:25px;
+	float:left;
+	margin:0;	
+	list-style:none;	
+	}
+	/*文字调式*/
+.link>a{text-decoration: none;}
+.link>a>span{
+	font-size:18px;
+	color:#fff; 		
+}
+.link>a>span:hover{
+    color:#0a18d8;
+}
+.link>a:hover{
+    color:#0a18d8;
+}
+/* 导航栏下拉菜单 */
+.dropdown{
+	margin-right:1px;
+	margin-top:1px;		
+}
+.dropdown-content a:hover {
+	background-color:rgb(236, 205, 30);
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	min-width:200px;
+}
+.dropdown-content>div{
+	display: flex;
+	justify-content: space-between;
+}
+.dropdown-content a{
+	font-size:20px !important;
+	color:#fff;
+	padding: 12px 16px;
+	display: block;
+	z-index: 100;
+} 
+.dropdown,.serve{
+	font-size:20px !important;
+	color:#fff;
+}
+
+li>div>a:hover{
+	color:#0a18d8;
+}
+.dropdown-content a:hover {
+	background-color:rgb(236, 205, 30);
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+} 
 /* 链接图标 搜索图标*/
-.nav_ul_a,.link,.font,.span{
-	font-size:25px;
- }
- .fonta{
-	 background: #fff;
-	 width: 25px !important;
-	 height: 25px !important	;
-	 border-radius:28px; 
- }
- .fontb{
-	 display: flex;
-	 justify-content: space-between;
-	 align-items: center;
- }
- .fonta img{
-	 width: 100%;
- }
- .fontc{
-	 width: 70px !important;
- }
- .link img{
-	 color:#ffff;
-	 z-index:50; 
-	 vertical-align: middle;/*文字与图片同一行*/
- }
-/*首页导航栏的颜色*/
-.nav_ul_a ul:last-child li:first-child a {
-	color: #00f;
+.link{
+	float:left;
+	margin-top:18px;
+	margin-right:16px;
 }
-/*---------导航栏中BMW标志图片---------*/
+.link>span{ font-size:18px;}
+.fonta{
+	background: #ccc;
+	width: 25px !important;
+	height: 25px !important	;
+	border-radius:28px; 
+}
+.fontb{
+	display: flex;
+	align-items: center;
+	margin-right:5px;
+}
+.fonta img{
+	width: 100%;
+}
+.fontc{
+	width: 70px !important;
+}
+.link img{
+   color:#ffff;
+   z-index:50; 
+   /*vertical-align: middle;文字与图片同一行*/
+}
+/* 搜素框 
+input[type=text] {
+	width: 130px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	background-color: white;
+	background-image: url('./image-bmw/ai219.png');
+	background-position: 10px 10px; 
+	background-repeat: no-repeat;
+	padding: 12px 20px 12px 40px;
+	-webkit-transition:width 0.4s ease-in-out;
+	transition:width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+	width: 30%;
+}*/
+/*----------导航栏中BMW标志图片-----------*/
 .img {
 	position: absolute;
 	top: 10px;
 	right: 18%;
-	z-index:25;
+	z-index:100;	
 }
+/* 图片设置大小 */
 .img>img {
 	width: 100px;
 }
+ body{
+	width:100%;
+	position:relative;
+}  
+ body{
+	width:100%;
+	position:relative;
+} 
 /*--- 查找你的BMW ---*/ 
 .Model{
 	width:100%;
@@ -135,6 +237,7 @@ h3{
 .medium li{
 	width:200px;
 	font-size: 18px;
+  list-style:none;
 	vertical-align:middle;
 	margin-bottom:30px;
 	
@@ -149,9 +252,12 @@ input[type="checkbox" i]{
 	height: 24px;
 }
 /*------BMW 1系-字体鼠标悬停效果---*/
-a{font-size:18px;}
+a{
+	font-size:18px;
+	text-decoration:none;
+}
 a:hover{
-       color:rgb(0, 68, 255);
+  color:rgb(0, 68, 255);
 }
  /*---------BMW 1系--------*/
 .ds1-model-card{
@@ -174,6 +280,15 @@ a:hover{
 	width:300px;
 	height:180px;
 }
+/* 鼠标经过图片放大效果 */
+.ds1-model-card--image img,.ds2-model-card--image img,.ds3-model-card--image img,.ds4-model-card--image img,.ds5-model-card--image img,.ds6-model-card--image img,.ds7-model-card--image img,.ds8-model-card--image img,.dsx-model-card--image img,.dsm-model-card--image img,.dsZ-model-card--image img,.dsi-model-card--image img,.dsip-model-card--image img,.dsz-model-card--image img{
+	  overflow: hidden; 
+		cursor: pointer;  
+		transition: all 0.6s;  
+}  
+.ds1-model-card--image img:hover,.ds2-model-card--image img:hover,.ds3-model-card--image img:hover,.ds4-model-card--image img:hover,.ds5-model-card--image img:hover,.ds6-model-card--image img:hover,.ds7-model-card--image img:hover,.ds8-model-card--image img:hover,.dsx-model-card--image img:hover,.dsm-model-card--image img:hover,.dsZ-model-card--image img:hover,.dsi-model-card--image img:hover,.dsip-model-card--image img:hover,.dsz-model-card--image img:hover{  
+	transform: scale(1.1);  
+}  
 .ds1-models--series-title{
 	margin-right: 35px;
 }
@@ -297,6 +412,8 @@ a:hover{
 .ds5-model-card--image img{
 	width:300px;
 	height:180px;
+	position: relative;
+	z-index: 6;
 }
 .ds5-models--series-title{
 	margin-right: 35px;
@@ -328,6 +445,8 @@ a:hover{
 .ds6-model-card--image img{
 	width:300px;
 	height:180px;
+	position: relative;
+	z-index: 6;
 }
 .ds6-models--series-title{
 	margin-right: 35px;
@@ -572,7 +691,7 @@ a:hover{
 }
 
 
-	/*------------------页面底部第六个div--------------------*/
+	/*-------------页面底部第六个div------------*/
 	.bottom {
 		width: 100%;
 		padding: 8px;

@@ -1,8 +1,9 @@
+//  页面中的第一个轮播图
  window.onload = function () {
   var i=0; 
   var LIWIDTH=1920;
   var DURATION=500; 
-  var LICOUNT=5; 
+  var LICOUNT=4; 
   var ulImgs=document.getElementById("ul-imgs"); 
   var ulIdxs=document.getElementById("ul-idxs"); 
   var lis=ulIdxs.children; 
@@ -10,7 +11,7 @@
     if(to==undefined){ 
       to=i+1; 
     } 
-    if(i==0){ 
+   if(i==0){ 
       if(to>i){ 
         ulImgs.className="transition"; 
       }else{ 
@@ -60,7 +61,7 @@
  
   var interval=3000;
   var timer=setInterval(function(){ 
-    moveTo() 
+    // moveTo() 
   },3000); 
   var banner=document.getElementById("banner"); 
   banner.onmouseover=function(){ 
@@ -87,11 +88,12 @@
           moveTo(i); 
           setTimeout(function(){ 
             canClick=true; 
-         },DURATION); 
-        } 
-     } 
+          },DURATION); 
+       } 
+      } 
     } 
- } 
+  } 
  }
+
 
 
