@@ -2,9 +2,13 @@
 	margin: 0;
 	padding:0;
 } 
+body{
+	position: relative;	 
+}
 /* 导航栏背景*/
 .navigation {
-	width: 100%;	
+	width: 100%;
+	display:flex;
 }
 .character{
 	width: 100%;
@@ -12,8 +16,7 @@
 	background: #8e8e8e;
 	display:flex;
 	justify-content:space-between;
-	flex-wrap:nowrap; 
-	
+	flex-wrap:nowrap; 	
 }
 .navmiddle{
 	width: 1200px;
@@ -54,7 +57,7 @@
 	font-size:18px;
 	color:#fff;
 	list-style:none;
-	margin-top:16px;	 
+	margin-top:16px;		
 }
 .two>li{
 	float:left;
@@ -134,7 +137,7 @@ li>div>a:hover{
 .dropdown:hover .dropdown-content {
 	display: block;
 } 
-/* 链接图标 搜索图标*/
+/* 链接图标*/
 .link{
 	float:left;
 	margin-top:18px;
@@ -143,8 +146,8 @@ li>div>a:hover{
 .link>span{ font-size:18px;}
 .fonta{
 	background: #ccc;
-	width: 25px !important;
-	height: 25px !important	;
+	width: 30px !important;
+	height: 30px !important;
 	border-radius:28px; 
 }
 .fontb{
@@ -163,24 +166,176 @@ li>div>a:hover{
    z-index:50; 
    vertical-align: middle;/*文字与图片同一行*/
 }
-/* 搜素框 
-input[type=text] {
-	width: 130px;
-	box-sizing: border-box;
-	border: 2px solid #ccc;
-	border-radius: 4px;
-	font-size: 16px;
-	background-color: white;
-	background-image: url('./image-bmw/ai219.png');
-	background-position: 10px 10px; 
-	background-repeat: no-repeat;
-	padding: 12px 20px 12px 40px;
-	-webkit-transition:width 0.4s ease-in-out;
-	transition:width 0.4s ease-in-out;
+
+/* 搜索框 */
+.htmleaf-container{
+	position:fixed;
+	right:950px;
+	z-index:3;
+	position: absolute;
+	top:71px;
+    right:685px;
 }
-input[type=text]:focus {
-	width: 30%;
-}*/
+.search-wrapper {
+	position: absolute;
+	/* transform: translate(50%,50%); */
+	top:-27px;
+	left:-13px;
+}
+/* 搜索按钮 */
+.search-wrapper .input-holder {
+	/* overflow: hidden; */
+	/* width:50px;
+  height: 50px;  */
+	background: rgba(255,255,255,0);
+	border-radius:6px;
+	position: absolute;
+	bottom:-50px;
+	right:-45px;
+	transition: all 0.3s ease-in-out;
+
+}
+.search-wrapper.active .input-holder {
+	/* border-radius: 50px; */
+	width:280px;
+	height:40px; 
+	background: rgb(236, 205, 30);
+	transition: all .8s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+}
+.search-wrapper .input-holder .search-input {
+	width:100%;
+	height: 25px;
+	padding:0px 20px 0 35px;
+	opacity: 0;
+	position: absolute;
+	top:-3px;
+	left:0px;
+	background: transparent;
+	box-sizing: border-box;
+	border:none;
+	outline:none;
+	font-family:"Open Sans", Arial, Verdana;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20px;
+	transform: translate(0, 60px);
+	transition: all 0.3s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	transition-delay: 0.3s;
+}
+.search-wrapper.active .input-holder .search-input {
+	opacity: 1;
+	transform: translate(0, 10px);
+}
+
+.search-wrapper .input-holder .search-icon {
+	width:30px;
+	height:30px; 
+	border:none;
+	border-radius:18px;
+	background: rgb(122, 122, 122);
+	padding:0px;
+	outline:none;
+	position: relative;
+	left:-231px;
+	top:-5px;
+	z-index: 2;
+	float:right;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.search-wrapper.active .input-holder .search-icon {
+	/* width: 50px;
+	height:50px; */
+	margin: 10px;
+	left:4px;
+	border-radius: 30px;
+}
+.search-wrapper .input-holder .search-icon span {
+	width:22px;
+	height:23px;
+	display: inline-block;
+	vertical-align: middle;
+	position:relative;
+	transform: rotate(45deg);
+	transition: all 0.3s cubic-bezier(0.650, -0.600, 0.240, 1.650);
+}
+.search-wrapper.active .input-holder .search-icon span {
+	transform: rotate(-45deg);
+}
+.search-wrapper .input-holder .search-icon span::before, .search-wrapper .input-holder .search-icon span::after {
+	position: absolute;
+	content:'';
+}
+.search-wrapper .input-holder .search-icon span::before {
+	width: 4px;
+	height: 10px;
+	left: 9px;
+	top: 20px;
+	border-radius: 2px;
+	background: #fff;
+}
+.search-wrapper .input-holder .search-icon span::after {
+	width: 16px;
+	height: 16px;
+	left: 0;
+	top: 0;
+	border-radius: 16px;
+	border: 3px solid #fff;
+}
+.search-wrapper .input-holder .search-icon:hover{
+	 background-color:rgb(75, 224, 216);
+}
+.search-wrapper .input-holder .search-icon::before::after:hover{
+	background-color:rgb(75, 224, 216);
+}
+/* 关闭按钮 */
+.search-wrapper .close {
+	position: absolute;
+	z-index: 1;
+	border-radius:6px;     
+	bottom:27px;
+    right:165px;
+	width:25px;
+	height:25px;
+	cursor: pointer;
+	transform: rotate(-180deg);
+	transition: all .3s cubic-bezier(0.285, -0.450, 0.935, 0.110);
+	transition-delay: 0.2s;
+	display:none;
+}
+.search-wrapper.active .close {
+	right:-75px;
+	bottom:10px;
+	transform: rotate(45deg);
+	transition: all .6s cubic-bezier(0.000, 0.105, 0.035, 1.570);
+	transition-delay: 0.2s;
+	display:block;
+}
+.search-wrapper .close::before, .search-wrapper .close::after {
+	position:absolute;
+	content:'';
+	background: #FFF;
+	border-radius: 2px;
+}
+.search-wrapper .close::before {
+	width: 5px;
+	height: 25px;
+	left: 10px;
+	top: 0px;
+}
+.search-wrapper .close::after {
+	width: 25px;
+	height: 5px;
+	left: 0px;
+	top: 10px;
+}
+.search-wrapper.active .close:hover{
+    background-color:rgb(230, 20, 13);
+}
+ @media screen and (max-width: 560px) {
+	.search-wrapper.active .input-holder {width:200px;}
+} 
+ 
 /*----------导航栏中BMW标志图片-----------*/
 .img {
 	position: absolute;
@@ -196,10 +351,6 @@ input[type=text]:focus {
 	width:100%;
 	position:relative;
 }  
- body{
-	width:100%;
-	position:relative;
-} 
 /*-------页面中的第一个轮播图-------*/
 #main{
 	width:1920px;
@@ -211,14 +362,14 @@ input[type=text]:focus {
 	position:relative;
 }
 #crousel-wrap {
-  width:1920px;
-  overflow:hidden;
+   width:1920px;
+   overflow:hidden;
 }
 #ul-imgs{
 	list-style:none;
 }
 #ul-imgs.transition{
-  transition:all .3s linear;
+    transition:all .3s linear;
 }
 #ul-imgs>li{
 	width:1920px;
@@ -229,11 +380,11 @@ input[type=text]:focus {
 }
 /* 轮播图背景图片 */
 .First,.Second,.three,.four,.five{
-		height:865px; 
-		background-size: cover;
-		background-repeat: round;
-		position: relative;
-		margin: auto;
+	height:865px; 
+	background-size: cover;
+	background-repeat: round;
+	position: relative;
+	margin: auto;
 }
 .First{
 	background-image:url(../image-bmw/HEV.jpg);
@@ -302,82 +453,83 @@ input[type=text]:focus {
 }
 /*---轮播图里的文字---*/
 .characters h1{
-		width:500px;
-		height:50px;
+	width:500px;
+	height:50px;
 }
 .characters h1 h3{
-		width:30px;
-		height:253px;}
+	width:30px;
+	height:253px;
+}
 .characters h3 h1{
-		width:30px;
-		height:253px;
+	width:30px;
+	height:253px;
 }
 .characters h1 h3 ul li{
-		width:30px;
-		height:285px;
+	width:30px;
+	height:285px;
 }
 .characters{
-		width:350px;
-		height: 270px;
-		font-size:18px;
-		color: #fff;
-		float:left;
-		margin-top:120px;
-		margin-left:160px;
-		line-height:50px;
+	width:350px;
+	height: 270px;
+	font-size:18px;
+	color: #fff;
+	float:left;
+	margin-top:120px;
+	margin-left:160px;
+	line-height:50px;
 }
 		/* 调整轮播图里的文字 */
 .characters h1,.characters h3,.characters li{
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;/**/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;/**/
 }
 .characters ul li{
-		background:#4488e9;/*文字背景颜色*/
-		text-align:center;/*文字居中*/
-		border-radius:8px;/*设置圆角*/
+	background:#4488e9;/*文字背景颜色*/
+	text-align:center;/*文字居中*/
+	border-radius:8px;/*设置圆角*/
 }
 	/*文字鼠标悬停效果*/
 .characters h1:hover{
-		font-size:40px;
-		color:rgb(0, 4, 255);
+	font-size:40px;
+	color:rgb(0, 4, 255);
 }
 .characters h3:hover{
 	font-size:25px;
 	color:rgb(0, 4, 255);
 }
 .characters li:hover{
-	 font-size:20px;
-	 color: #ffffff;
-	 background-color: #0765e9;
+	font-size:20px;
+	color: #ffffff;
+	background-color: #0765e9;
 }
 /*----- 微信登录链接 -----*/
 .WeChat{
-		position:absolute;
-		top:8%;
-		right:22px;
-		display:flex;
-		justify-content: space-around;
+	position:absolute;
+	top:8%;
+	right:22px;
+	display:flex;
+	justify-content: space-around;
 }
 .WeChat img{
-			width:100%;
-			border-radius:3px;
+	width:100%;
+	border-radius:3px;
 }
 /* 微信登录链接里面的内容 */
 .chatcallout{
 	width:0px;
 	display:flex;
-  position: absolute;
+    position: absolute;
 	top:285px;
 	right:0px;
 }
 /* 关闭按钮 */
 .close{
-  width:30px;
+    width:30px;
 	height:30px;
 	background:#0765e9;
 	position:relative;
-	top:30px;
+	top:19px;
 	right:-460px;
 	z-index:200;
     font-size: 16px;
@@ -388,9 +540,9 @@ input[type=text]:focus {
 	padding:0 20px;
 }
 .chatcallout h4{
-	 font-size:23px;
-	 margin:auto;
-	 text-align: center;/*文字居中*/
+	font-size:23px;
+	margin:auto;
+	text-align: center;/*文字居中*/
 }
 .chatcallout h4{
 	color:#fff;
@@ -453,9 +605,9 @@ input[type=text]:focus {
 /*字体往左下角移动定位*/
 .car-type-list a{
     position:absolute;/*绝对定位*/
-		flex:0px;
-		bottom:6px;/*往下移动*/
-		font-size:16px;	color:#fff;
+	flex:0px;
+	bottom:6px;/*往下移动*/
+	font-size:16px;	color:#fff;
 }
 /*页面中第二个轮播图*/
 .banner {
@@ -503,12 +655,12 @@ input[type=text]:focus {
 	justify-content: space-between;
 	position:absolute;
 	top:40%;
-  left:-1%; 
+    left:-1%; 
 }
 .right>a>img{
 	justify-content: space-between;
 	position:absolute;
-  top:40%;
+    top:40%;
 	right:-1%; 
 }
 /*-----车型系列预览选择------*/
@@ -573,11 +725,11 @@ input[type=text]:focus {
 
 /*BMW 试驾精英图片*/
 .tyble-1 span img {
-		width: 553px;
-		height: 311px;
-		position: relative;
-		padding: 15px;		
-		border: 1px solid #ccc;
+	width: 553px;
+	height: 311px;
+	position: relative;
+	padding: 15px;		
+	border: 1px solid #ccc;
 }	 
 /* 图片鼠标经过放大效果 */
 .tyble-1 span img{ 
@@ -586,96 +738,96 @@ input[type=text]:focus {
 	transition: all 0.6s;  
 }  
 .tyble-1 span img:hover{  
-  transform: scale(1.02);  
+    transform: scale(1.02);  
 }  
  /* 文字hover效果 */
 .tyble-1 p:hover{  
-  color:#0a18d8; 
+    color:#0a18d8; 
 }  
 .ds2-tyble-1 {
-		width: 521px;
-		height: 1117px;
-		margin: 5px;
-		padding: 8px;
+	width: 521px;
+	height: 1117px;
+	margin: 5px;
+	padding: 8px;
 }
 	/*BMW 试驾精英文字*/
 .ds2-tyble-1 a h1 {
-		width: 597.25px;
-		height: 25px;
-		padding: 10px;
-		margin: 0;
+	width: 597.25px;
+	height: 25px;
+	padding: 10px;
+	margin: 0;
 }
 	/*全方位提升驾驶技巧*/
 .ds2-tyble-1-a-h1 p {
-		width: 597.5px;
-		height: 15.71px;
-		padding: 5px;
-		margin: 0;
+	width: 597.5px;
+	height: 15.71px;
+	padding: 5px;
+	margin: 0;
 }
 	/*了解详情*/
 .ds2-tyble-1-a-h1-p a {
-		width: 582.5px;
-		height: 20px;
-		padding: 5px;
-		margin: 0;
+	width: 582.5px;
+	height: 20px;
+	padding: 5px;
+	margin: 0;
 }
 
 	/*页面官网信息服务*/
 .ds2-g{
-		width: 1200px;
-		padding:0 8px;
-		margin: 0 auto;
-		box-sizing: border-box;
-		display: flex;
-		/*弹性*/
+	width: 1200px;
+	padding:0 8px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	display: flex;
+	/*弹性*/
 }
 	/*页面官网信息服务左上角第一个div*/
 .ds2-g-information-figure {
-		width: 285px;
-		height: 361px;
-		margin: 7.5px;
-		padding: 7.5px;		
+	width: 285px;
+	height: 361px;
+	margin: 7.5px;
+	padding: 7.5px;		
 }
 	/* div->图片*/
 .information{
-		width: 271px;
-		height: 285px;
-		padding: 8px;
-		margin:0;
+	width: 271px;
+	height: 285px;
+	padding: 8px;
+	margin:0;
     
 }
 /* 鼠标经过图片放大效果 */
 .figure img{ 
-	  overflow: hidden; 
-		cursor: pointer;  
-		transition: all 0.6s;  
+	overflow: hidden; 
+	cursor: pointer;  
+	transition: all 0.6s;  
 }  
 .figure img:hover{  
 	transform: scale(1.08);  
 }  
 	/*页面底部三张图片定位*/
 .figure img{
-		width: 253px;
-		height: 142px;
-		margin:0;
-		padding:8px;
-	  border:1px solid #ccc;
+	width: 253px;
+	height: 142px;
+	margin:0;
+	padding:8px;
+	border:1px solid #ccc;
 }
 	/*页面官网信息服务文字*/
 .ds2-g-information-figure h3 {
-		width: 275px;
-		height: 24px;
-		padding-right: 5px;
-		margin-bottom: 3px;
+	width: 275px;
+	height: 24px;
+	padding-right: 5px;
+	margin-bottom: 3px;
 }
 .ds2-g-information-figure p {
-		width: 260px;
-		height: 20px;
-		padding-left: 8px;
+	width: 260px;
+	height: 20px;
+	padding-left: 8px;
 }
 .ds2-information-figure a {
-		width: 177px;
-		height: 20px;
+	width: 177px;
+	height: 20px;
 }
 /* 文字hover效果 */
 .figure p:hover{
@@ -683,65 +835,65 @@ input[type=text]:focus {
 }
 /*-----页面底部第六个div------*/
 .bottom {
-		width: 100%;
-		padding: 8px;
-		background: #8e8e8e;
+	width: 100%;
+	padding: 8px;
+	background: #8e8e8e;
 }		
 	/*  页脚第一个div */
 .bottom-footer{
-		width:1200px;
-		height: 268px;
-		margin:0 auto;
-		padding-left: 37.5px;
-		padding-right: 37.5px;	
+	width:1200px;
+	height: 268px;
+	margin:0 auto;
+	padding-left: 37.5px;
+	padding-right: 37.5px;	
 	}
 .table{
-		position: relative;
-		padding: 5px;		 
+	position: relative;
+	padding: 5px;		 
 }
 	/* 页脚div里文字 */
 .widget{
-		width: 533px;
-		display: table-row;		
+	width: 533px;
+	display: table-row;		
 }
 	/* 字体颜色 */
 .widget span{
-		font-size:18px;
-		color: #fff;
-	 }
+	font-size:18px;
+	color: #fff;
+}
 .list{ 
-	  width:533px;
-		display: table-cell;
-		padding-bottom: 16px;
-		padding-left: 10px;	
-		list-style:none; 
+	width:533px;
+	display: table-cell;
+	padding-bottom: 16px;
+	padding-left: 10px;	
+	list-style:none; 
 }
 .list li{
-		display: table-cell;
-		display: inline;
-		margin-left:13px;	 
+	display: table-cell;
+	display: inline;
+	margin-left:13px;	 
 }
    /* 字体颜色 */
 .list a{
-	  text-decoration:none;
-		font-size:17px;
-		color: #fff;
+	text-decoration:none;
+	font-size:17px;
+	color: #fff;
 }
    /* 字体鼠标悬停效果 */
 .list a:hover{
-		color:#00f;
+	color:#00f;
 }
    /*页脚文字中横线*/
 .bottom-footer hr{
-	  width:1200px;
-	  height:2px;
-	  float:left;
-	  background-color:#ccc;
+	width:1200px;
+	height:2px;
+	float:left;
+	background-color:#ccc;
  }
    /*页脚右下角文字*/
  .bottom-footer p{
-	  position:absolute;/*绝对定位*/
-	  right:-2px;
-	  bottom:-30px;
-	  color:#fff;
+	position:absolute;/*绝对定位*/
+	right:-2px;
+	bottom:-30px;
+	color:#fff;
 }
